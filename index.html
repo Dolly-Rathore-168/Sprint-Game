@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Sprint Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <div id="header">
+      <h1>Math Sprint Game</h1>
+    </div>
+
+    <!-- Splash Page -->
+    <div class="card" id="splash-page">
+      <form id="start-form">
+        <div class="selection-container">
+          <label class="radio-container">
+            <input type="radio" name="question" value="10" /> 10 Questions
+            <div class="best-score"><span class="best-score-value">0.0s</span></div>
+          </label>
+        </div>
+        <div class="selection-container">
+          <label class="radio-container">
+            <input type="radio" name="question" value="25" /> 25 Questions
+            <div class="best-score"><span class="best-score-value">0.0s</span></div>
+          </label>
+        </div>
+        <div class="selection-container">
+          <label class="radio-container">
+            <input type="radio" name="question" value="50" /> 50 Questions
+            <div class="best-score"><span class="best-score-value">0.0s</span></div>
+          </label>
+        </div>
+        <div class="selection-container">
+          <label class="radio-container">
+            <input type="radio" name="question" value="100" /> 100 Questions
+            <div class="best-score"><span class="best-score-value">0.0s</span></div>
+          </label>
+        </div>
+        <div id="selection-footer">
+          <button type="submit">Start Game</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Countdown Page -->
+    <div class="card" id="countdown-page" hidden>
+      <h1 id="countdown">3</h1>
+    </div>
+
+    <!-- Game Page -->
+    <div class="card game-page" id="game-page" hidden>
+      <h2>Math Challenge</h2>
+      <div id="game-questions"></div>
+      <div id="item-footer">
+        <button class="wrong">Wrong</button>
+        <button class="right">Right</button>
+      </div>
+    </div>
+
+    <!-- Score Page -->
+    <div class="card" id="score-page" hidden>
+      <div class="score-container">
+        <h1 class="title">Your Time</h1>
+        <h1 class="final-time">0.0s</h1>
+        <h1 class="base-time">Base Time: 0.0s</h1>
+        <h1 class="penalty-time">Penalty: +0.0s</h1>
+      </div>
+      <div class="score-footer">
+        <button class="play-button">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
